@@ -13,53 +13,7 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-		<script>
-			function editar(id, txtTarefa) {
-				let form = document.createElement('form');
-				form.action = 'tarefa_controller.php?acao=atualizar'
-				form.method = 'post'
-				form.className = 'row'
-
-				let inputTarefa = document.createElement('input');
-				inputTarefa.type = 'text'
-				inputTarefa.name = 'tarefa'
-				inputTarefa.className = 'col-9 form-control'
-				inputTarefa.value = txtTarefa
-
-				let inputId = document.createElement('input')
-				inputId.type = 'hidden'
-				inputId.name = 'id'
-				inputId.value = id
-
-				let button = document.createElement('button');
-				button.type = 'submit'
-				button.className = 'class-3 btn btn-info'
-				button.innerHTML = 'Atualizar'
-
-				form.appendChild(inputTarefa);
-
-				form.appendChild(inputId);
-
-				form.appendChild(button);
-
-				//seleciona a div tarefa
-				let tarefa = document.getElementById('tarefa_' + id);
-
-				//limpa o texto da tarefa para inclusão do form
-				tarefa.innerHTML = '';
-
-				//inclui o form na pagina
-				tarefa.insertBefore(form, tarefa[0]);
-			}
-
-			function remover(id) {
-				location.href = 'todas_tarefas.php?acao=remover&id=' + id;
-			}
-
-			function marcarRealizada(id) {
-				location.href = 'todas_tarefas.php?acao=marcarRealizada&id=' + id;
-			}
-		</script>
+		<script src="js/script.js"></script>
 	</head>
 
 	<body>
