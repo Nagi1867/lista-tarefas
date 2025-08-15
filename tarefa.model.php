@@ -10,7 +10,8 @@
         }
 
         public function __set($atributo, $valor) {
-            return $this->$atributo = $valor;
+            $this->$atributo = $valor;
+            return $this;
         }
     }
 
